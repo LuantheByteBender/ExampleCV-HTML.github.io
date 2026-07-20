@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional developer portfolio and virtual CV."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#080b12" />
+    <title>Luan du Plessis | Software & AI Engineer</title>
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="#hero" aria-label="Luan du Plessis home">LD<span>.</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span>
+        </button>
+        <div class="nav-backdrop" aria-hidden="true"></div>
+        <div class="nav-links" id="primary-menu" aria-label="Primary navigation">
+          <a href="#hero" aria-current="page">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#github">GitHub</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="nav-download" href="assets/pdf/cv.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero" aria-labelledby="hero-title">
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="availability-dot" aria-hidden="true"></span> Available for opportunities</p>
+            <p class="greeting">Hello, I'm</p>
+            <h1 id="hero-title">Luan <span>du Plessis</span></h1>
+            <p class="role-line">I’m a <span class="typed-role" aria-live="polite">Software Developer</span><span class="typing-cursor" aria-hidden="true"></span></p>
+            <p class="hero-summary">I build modern software solutions, AI-powered applications, and high-quality systems with a strong focus on clean architecture, user experience, and software quality.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="assets/pdf/cv.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+              <a class="button button-secondary" href="#projects">View Projects <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="social-links" aria-label="Social links">
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.61.07-.61 1 .07 1.52 1.02 1.52 1.02.89 1.52 2.33 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.8c.85 0 1.7.11 2.5.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.9.68 1.81v2.68c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.25 7a1.97 1.97 0 0 0 0-3ZM20.44 13.4c0-3.47-1.85-5.08-4.32-5.08a3.74 3.74 0 0 0-3.36 1.85V8.5H9.38V20h3.38v-5.69c0-1.5.29-2.96 2.15-2.96 1.83 0 1.85 1.72 1.85 3.06V20h3.38l.3-6.6Z"/></svg></a>
+              <a href="mailto:hello@example.com" aria-label="Email Luan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17v-13Zm1.7 1.7 6.8 5.36 6.8-5.36H5.2Zm13.6 9.6V9.35L12 14.7 5.2 9.35v7.45h13.6Z"/></svg></a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Professional profile image">
+            <div class="profile-glow" aria-hidden="true"></div>
+            <div class="profile-frame"><img src="assets/images/hero-profile.png" alt="Professional developer portrait placeholder" /></div>
+            <ul class="tech-badges" aria-label="Technical skills">
+              <li class="badge-html">HTML</li><li class="badge-css">CSS</li><li class="badge-js">JavaScript</li><li class="badge-laravel">Laravel</li><li class="badge-php">PHP</li><li class="badge-vue">Vue</li><li class="badge-nuxt">Nuxt</li><li class="badge-ai">AI</li><li class="badge-playwright">Playwright</li>
+            </ul>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about section"><span>Scroll to explore</span><i aria-hidden="true"></i></a>
+      </section>
+      <section id="about" class="about-section" aria-labelledby="about-title">
+        <div class="about-inner">
+          <div class="about-intro reveal-on-scroll">
+            <p class="section-label">About me</p>
+            <h2 id="about-title">Building software with quality, curiosity and continuous learning.</h2>
+            <div class="about-copy">
+              <p>I’m Luan du Plessis, a Bachelor of Science in Information Technology student and emerging QA / System Tester, AI Engineer, and Web Developer.</p>
+              <p>I enjoy understanding how systems work from frontend to backend—building AI-powered applications, improving software quality, and steadily expanding my technical skills to create useful, dependable products.</p>
+            </div>
+          </div>
+
+          <div class="about-grid" aria-label="Professional profile highlights">
+            <article class="about-card reveal-on-scroll" style="--reveal-delay: 80ms">
+              <p class="card-kicker">01 / Current focus</p>
+              <h3>Turning ideas into reliable products.</h3>
+              <ul class="focus-list"><li>AI Engineering</li><li>Software Development</li><li>Quality Assurance</li><li>APIs</li><li>Modern Web Applications</li></ul>
+            </article>
+            <article class="about-card reveal-on-scroll" style="--reveal-delay: 140ms">
+              <p class="card-kicker">02 / My approach</p>
+              <h3>Thoughtful work, built to last.</h3>
+              <ul class="approach-list"><li>Problem Solving</li><li>Continuous Learning</li><li>Attention to Detail</li><li>Clean Solutions</li><li>Team Collaboration</li></ul>
+            </article>
+            <article class="about-card about-card-tech reveal-on-scroll" style="--reveal-delay: 200ms">
+              <p class="card-kicker">03 / Current technologies</p>
+              <h3>A practical, growing toolkit.</h3>
+              <ul class="technology-list" aria-label="Current technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>Laravel</li><li>Vue</li><li>Nuxt</li><li>MySQL</li><li>Git</li><li>GitHub</li><li>Playwright</li><li>REST APIs</li><li>Python</li><li>AI</li></ul>
+            </article>
+            <article class="about-card about-card-goal reveal-on-scroll" style="--reveal-delay: 260ms">
+              <p class="card-kicker">04 / Career goal</p>
+              <h3>Growing into a well-rounded engineer.</h3>
+              <p class="goal-copy">My goal is to design, build and test scalable applications while leveraging AI to create meaningful business solutions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="experience" class="journey-section" aria-labelledby="journey-title">
+        <div class="journey-inner">
+          <header class="journey-intro reveal-on-scroll"><p class="section-label">My journey</p><h2 id="journey-title">My Journey in Technology</h2><p>Every role, project and learning opportunity has contributed to my growth as a software professional—and continues to shape the career I’m building.</p></header>
+          <ol class="journey-timeline" aria-label="Luan du Plessis professional journey">
+            <li class="timeline-entry timeline-left"><article class="timeline-card reveal-on-scroll"><div class="timeline-card-top"><span class="timeline-icon" aria-hidden="true">⌘</span><time datetime="">Date / Present</time></div><p class="timeline-type">Education</p><h3>Bachelor of Science in Information Technology</h3><p>Learning software development, databases, networking, AI, systems analysis, software engineering and modern development practices.</p><ul class="timeline-badges" aria-label="Education technologies"><li>Java</li><li>C#</li><li>SQL</li><li>Networking</li><li>Git</li></ul></article></li>
+            <li class="timeline-entry timeline-right"><article class="timeline-card reveal-on-scroll"><div class="timeline-card-top"><span class="timeline-icon" aria-hidden="true">✓</span><time datetime="">Date / Present</time></div><p class="timeline-type">System / QA Tester</p><h3>Making quality visible.</h3><p>Validating software quality through functional testing, regression testing, bug reporting and collaboration with developers to improve system reliability.</p><ul class="timeline-badges" aria-label="Quality assurance skills"><li>Manual Testing</li><li>Regression Testing</li><li>Bug Tracking</li><li>Test Cases</li><li>Quality Assurance</li></ul></article></li>
+            <li class="timeline-entry timeline-left"><article class="timeline-card reveal-on-scroll"><div class="timeline-card-top"><span class="timeline-icon" aria-hidden="true">✦</span><time datetime="">Date / Present</time></div><p class="timeline-type">AI Engineer / Web Developer</p><h3>Building intelligent web experiences.</h3><p>Building modern web applications, integrating AI solutions, working with backend APIs and improving business processes through software development.</p><ul class="timeline-badges" aria-label="Web development technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Laravel</li><li>PHP</li><li>Vue</li><li>Nuxt</li><li>REST APIs</li><li>AI</li><li>Git</li></ul></article></li>
+            <li class="timeline-entry timeline-right"><article class="timeline-card reveal-on-scroll"><div class="timeline-card-top"><span class="timeline-icon" aria-hidden="true">→</span><time datetime="">Today</time></div><p class="timeline-type">The next milestone</p><h3>Learning forward.</h3><p>Continuously learning, improving and building practical software solutions while expanding my knowledge of backend development, AI engineering, software architecture and cloud technologies.</p><ul class="timeline-badges" aria-label="Current direction"><li>Learning</li><li>Building</li><li>Improving</li></ul></article></li>
+          </ol>
+        </div>
+      </section>
+      <section id="projects" class="projects-section" aria-labelledby="projects-title">
+        <div class="projects-inner">
+          <header class="projects-intro reveal-on-scroll"><p class="section-label">Featured projects</p><h2 id="projects-title">Projects That Showcase My Skills</h2><p>These projects represent practical experience across software development, AI engineering, web development and quality assurance.</p></header>
+          <div class="project-filters reveal-on-scroll" role="group" aria-label="Project categories"><button type="button" class="is-selected" aria-pressed="true">All</button><button type="button" aria-pressed="false">Web Development</button><button type="button" aria-pressed="false">AI</button><button type="button" aria-pressed="false">QA &amp; Testing</button><button type="button" aria-pressed="false">University</button><button type="button" aria-pressed="false">Personal</button></div>
+          <article class="featured-project reveal-on-scroll"><div class="featured-visual project-visual" role="img" aria-label="Abstract interface preview for an AI-powered policy comparison system"><span class="visual-orb"></span><div class="visual-window"><div class="visual-top"><i></i><i></i><i></i></div><div class="visual-columns"><span></span><span></span></div><div class="visual-chart"><b></b><b></b><b></b><b></b><b></b><b></b></div></div><p>Policy intelligence</p></div><div class="featured-content"><p class="project-category">Featured / AI &amp; Web Development</p><h3>Policy Comparison System</h3><p class="featured-description">A modern comparison platform designed to turn complex policy information into clear, actionable insights through a responsive interface, API-driven data and AI-assisted analysis.</p><div class="featured-details"><div><h4>Key highlights</h4><ul class="highlights-list"><li>Responsive Design</li><li>REST API Integration</li><li>AI Features</li><li>Authentication</li><li>Modern UI</li><li>Database Integration</li></ul></div><div><h4>Built with</h4><ul class="project-tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Laravel</li><li>PHP</li><li>Vue</li><li>Nuxt</li><li>REST API</li><li>AI</li><li>Playwright</li><li>MySQL</li></ul></div></div><div class="project-actions"><a class="project-button project-button-primary" href="https://github.com/" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a><a class="project-button project-button-secondary" href="#contact">Live Demo <span aria-hidden="true">↗</span></a></div></div></article>
+          <div class="projects-grid" aria-label="More project highlights">
+            <article class="project-card reveal-on-scroll"><div class="project-card-visual visual-policy" role="img" aria-label="Abstract interface placeholder for Policy Comparison System"><span>01</span></div><div class="project-card-content"><p class="project-category">Web Development</p><h3>Policy Comparison System</h3><p>Clear policy insights through a responsive, API-driven comparison experience.</p><ul class="project-tags"><li>Laravel</li><li>Vue</li><li>REST API</li></ul><div class="project-actions"><a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a><a class="project-link" href="#contact">Demo</a></div></div></article>
+            <article class="project-card reveal-on-scroll" style="--reveal-delay:80ms"><div class="project-card-visual visual-physio" role="img" aria-label="Abstract interface placeholder for Burns Beach Physio"><span>02</span></div><div class="project-card-content"><p class="project-category">Web Development</p><h3>Burns Beach Physio</h3><p>A polished practice website focused on clear services and easy patient journeys.</p><ul class="project-tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-actions"><a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a><a class="project-link" href="#contact">Demo</a></div></div></article>
+            <article class="project-card reveal-on-scroll" style="--reveal-delay:140ms"><div class="project-card-visual visual-testing" role="img" aria-label="Abstract test automation placeholder"><span>03</span></div><div class="project-card-content"><p class="project-category">QA &amp; Testing</p><h3>Playwright Automation</h3><p>Reliable end-to-end testing workflows that support consistent software quality.</p><ul class="project-tags"><li>Playwright</li><li>JavaScript</li><li>QA</li></ul><div class="project-actions"><a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a><a class="project-link" href="#contact">Demo</a></div></div></article>
+            <article class="project-card reveal-on-scroll" style="--reveal-delay:200ms"><div class="project-card-visual visual-cv" role="img" aria-label="Abstract portfolio interface placeholder"><span>04</span></div><div class="project-card-content"><p class="project-category">Personal</p><h3>Virtual CV</h3><p>A premium personal portfolio designed to communicate technical depth and clarity.</p><ul class="project-tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-actions"><a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a><a class="project-link" href="#contact">Demo</a></div></div></article>
+            <article class="project-card reveal-on-scroll" style="--reveal-delay:260ms"><div class="project-card-visual visual-university" role="img" aria-label="Abstract university project placeholder"><span>05</span></div><div class="project-card-content"><p class="project-category">University</p><h3>University Project</h3><p>A full-stack academic project bringing together analysis, data and software design.</p><ul class="project-tags"><li>Java</li><li>SQL</li><li>Git</li></ul><div class="project-actions"><a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a><a class="project-link" href="#contact">Demo</a></div></div></article>
+          </div>
+        </div>
+      </section>
+      <section id="skills"></section>
+      <section id="education"></section>
+      <section id="certificates"></section>
+      <section id="github"></section>
+      <section id="contact"></section>
+    </main>
+
+    <footer></footer>
+
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/typing.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 /** Types concise role titles in the Hero without hiding the initial readable label. */
 const roleElement = document.querySelector('.typed-role');
-const roles = ['Software Developer', 'AI Engineer', 'QA Engineer'];
+const roles = [ 'Aspiring Software Developer', 'Aspiring AI Engineer'];
 
 if (roleElement && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   let roleIndex = 0;

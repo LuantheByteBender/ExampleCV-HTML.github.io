@@ -97,7 +97,7 @@
     }
 }
 
-/* Gentle, varied drifting and fading used only by decorative hero dust particles. */
+/* Gentle, varied drifting and fading used by the page-wide decorative dust particles. */
 @keyframes particle-drift {
     from { opacity: .1; transform: translate3d(0, 0, 0); }
     50% { opacity: .48; }

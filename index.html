@@ -12,13 +12,21 @@
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/layout.css?v=3" />
+  <link rel="stylesheet" href="css/components.css?v=3" />
+  <link rel="stylesheet" href="css/animations.css?v=2" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
 <body>
+  <!-- One fixed particle field connects the background across the entire page. -->
+  <div class="page-particles" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
   <header class="site-header" id="top">
     <nav class="site-nav" aria-label="Main navigation">
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu"
@@ -44,10 +52,6 @@
       <!-- Decorative background glow shapes for the hero section. -->
       <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
       <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
-      <!-- Small floating light particles; hidden from screen readers because they are decorative. -->
-      <div class="hero-particles" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-      </div>
       <div class="hero-grid">
         <div class="hero-copy">
           <p class="greeting">Hello, I'm</p>
@@ -81,7 +85,7 @@
         </div>
         <div class="hero-visual" aria-label="Professional profile image">
           <div class="profile-glow" aria-hidden="true"></div>
-          <div class="profile-frame"><img src="assets/images/Profile_HeroImage.png"
+          <div class="profile-frame"><img src="assets/images/ProfileIPics-hero(Copy).jpeg"
               alt="Professional developer portrait placeholder" /></div>
           <!-- Skill badges positioned around the profile image. JavaScript gives them the magnetic effect. -->
           <ul class="tech-badges" aria-label="Technical skills">

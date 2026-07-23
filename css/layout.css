@@ -11,9 +11,16 @@
 body {
     margin: 0;
     min-width: 320px;
-    background: var(--bg);
+    background: linear-gradient(130deg, #080b12 0%, #0b1020 55%, #090d15 100%);
+    background-attachment: fixed;
     color: var(--text);
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main,
+footer {
+    position: relative;
+    z-index: 1;
 }
 
 * {
@@ -119,18 +126,19 @@ a {
     display: grid;
     align-items: center;
     isolation: isolate;
-    background: linear-gradient(130deg, #080b12 0%, #0b1020 55%, #090d15 100%);
+    background: transparent;
 }
 
-/* Soft, decorative dust flowing behind the hero content. */
-.hero-particles {
-    position: absolute;
+/* Soft, decorative dust flowing behind every section as one connected layer. */
+.page-particles {
+    position: fixed;
     z-index: 0;
     inset: 0;
+    overflow: hidden;
     pointer-events: none;
 }
 
-.hero-particles i {
+.page-particles i {
     position: absolute;
     width: var(--particle-size, 2px);
     height: var(--particle-size, 2px);
@@ -141,28 +149,56 @@ a {
     animation: particle-drift var(--particle-duration, 10s) ease-in-out infinite alternate;
 }
 
-.hero-particles i:nth-child(1) { top: 12%; left: 7%; --particle-duration: 7s; --drift-x: 12px; --drift-y: -18px; }
-.hero-particles i:nth-child(2) { top: 24%; left: 31%; --particle-duration: 10s; --particle-size: 3px; --drift-x: -9px; --drift-y: -13px; }
-.hero-particles i:nth-child(3) { top: 7%; left: 58%; --particle-duration: 9s; --drift-x: 15px; --drift-y: -20px; }
-.hero-particles i:nth-child(4) { top: 18%; left: 84%; --particle-duration: 11s; --drift-x: -13px; --drift-y: -16px; }
-.hero-particles i:nth-child(5) { top: 39%; left: 13%; --particle-duration: 8s; --particle-size: 3px; --drift-x: 10px; --drift-y: -24px; }
-.hero-particles i:nth-child(6) { top: 49%; left: 44%; --particle-duration: 12s; --drift-x: -14px; --drift-y: -18px; }
-.hero-particles i:nth-child(7) { top: 43%; left: 93%; --particle-duration: 7s; --drift-x: 16px; --drift-y: -12px; }
-.hero-particles i:nth-child(8) { top: 68%; left: 5%; --particle-duration: 10s; --drift-x: -11px; --drift-y: -21px; }
-.hero-particles i:nth-child(9) { top: 78%; left: 27%; --particle-duration: 9s; --particle-size: 3px; --drift-x: 14px; --drift-y: -15px; }
-.hero-particles i:nth-child(10) { top: 72%; left: 67%; --particle-duration: 11s; --drift-x: -16px; --drift-y: -19px; }
-.hero-particles i:nth-child(11) { top: 88%; left: 87%; --particle-duration: 8s; --drift-x: 12px; --drift-y: -17px; }
-.hero-particles i:nth-child(12) { top: 58%; left: 79%; --particle-duration: 12s; --particle-size: 3px; --drift-x: -10px; --drift-y: -23px; }
-.hero-particles i:nth-child(13) { top: 6%; left: 43%; --particle-duration: 13s; --drift-x: -12px; --drift-y: -16px; }
-.hero-particles i:nth-child(14) { top: 16%; left: 72%; --particle-duration: 9s; --drift-x: 18px; --drift-y: -12px; }
-.hero-particles i:nth-child(15) { top: 31%; left: 4%; --particle-duration: 12s; --drift-x: 10px; --drift-y: -24px; }
-.hero-particles i:nth-child(16) { top: 34%; left: 62%; --particle-duration: 8s; --particle-size: 3px; --drift-x: -16px; --drift-y: -18px; }
-.hero-particles i:nth-child(17) { top: 52%; left: 24%; --particle-duration: 11s; --drift-x: 14px; --drift-y: -14px; }
-.hero-particles i:nth-child(18) { top: 61%; left: 54%; --particle-duration: 13s; --drift-x: -10px; --drift-y: -22px; }
-.hero-particles i:nth-child(19) { top: 66%; left: 96%; --particle-duration: 9s; --drift-x: 16px; --drift-y: -15px; }
-.hero-particles i:nth-child(20) { top: 83%; left: 12%; --particle-duration: 12s; --particle-size: 3px; --drift-x: -14px; --drift-y: -19px; }
-.hero-particles i:nth-child(21) { top: 91%; left: 48%; --particle-duration: 10s; --drift-x: 12px; --drift-y: -13px; }
-.hero-particles i:nth-child(22) { top: 82%; left: 74%; --particle-duration: 14s; --drift-x: -18px; --drift-y: -20px; }
+.page-particles i:nth-child(1) { top: 12%; left: 7%; --particle-duration: 7s; --drift-x: 12px; --drift-y: -18px; }
+.page-particles i:nth-child(2) { top: 24%; left: 31%; --particle-duration: 10s; --particle-size: 3px; --drift-x: -9px; --drift-y: -13px; }
+.page-particles i:nth-child(3) { top: 7%; left: 58%; --particle-duration: 9s; --drift-x: 15px; --drift-y: -20px; }
+.page-particles i:nth-child(4) { top: 18%; left: 84%; --particle-duration: 11s; --drift-x: -13px; --drift-y: -16px; }
+.page-particles i:nth-child(5) { top: 39%; left: 13%; --particle-duration: 8s; --particle-size: 3px; --drift-x: 10px; --drift-y: -24px; }
+.page-particles i:nth-child(6) { top: 49%; left: 44%; --particle-duration: 12s; --drift-x: -14px; --drift-y: -18px; }
+.page-particles i:nth-child(7) { top: 43%; left: 93%; --particle-duration: 7s; --drift-x: 16px; --drift-y: -12px; }
+.page-particles i:nth-child(8) { top: 68%; left: 5%; --particle-duration: 10s; --drift-x: -11px; --drift-y: -21px; }
+.page-particles i:nth-child(9) { top: 78%; left: 27%; --particle-duration: 9s; --particle-size: 3px; --drift-x: 14px; --drift-y: -15px; }
+.page-particles i:nth-child(10) { top: 72%; left: 67%; --particle-duration: 11s; --drift-x: -16px; --drift-y: -19px; }
+.page-particles i:nth-child(11) { top: 88%; left: 87%; --particle-duration: 8s; --drift-x: 12px; --drift-y: -17px; }
+.page-particles i:nth-child(12) { top: 58%; left: 79%; --particle-duration: 12s; --particle-size: 3px; --drift-x: -10px; --drift-y: -23px; }
+.page-particles i:nth-child(13) { top: 6%; left: 43%; --particle-duration: 13s; --drift-x: -12px; --drift-y: -16px; }
+.page-particles i:nth-child(14) { top: 16%; left: 72%; --particle-duration: 9s; --drift-x: 18px; --drift-y: -12px; }
+.page-particles i:nth-child(15) { top: 31%; left: 4%; --particle-duration: 12s; --drift-x: 10px; --drift-y: -24px; }
+.page-particles i:nth-child(16) { top: 34%; left: 62%; --particle-duration: 8s; --particle-size: 3px; --drift-x: -16px; --drift-y: -18px; }
+.page-particles i:nth-child(17) { top: 52%; left: 24%; --particle-duration: 11s; --drift-x: 14px; --drift-y: -14px; }
+.page-particles i:nth-child(18) { top: 61%; left: 54%; --particle-duration: 13s; --drift-x: -10px; --drift-y: -22px; }
+.page-particles i:nth-child(19) { top: 66%; left: 96%; --particle-duration: 9s; --drift-x: 16px; --drift-y: -15px; }
+.page-particles i:nth-child(20) { top: 83%; left: 12%; --particle-duration: 12s; --particle-size: 3px; --drift-x: -14px; --drift-y: -19px; }
+.page-particles i:nth-child(21) { top: 91%; left: 48%; --particle-duration: 10s; --drift-x: 12px; --drift-y: -13px; }
+.page-particles i:nth-child(22) { top: 82%; left: 74%; --particle-duration: 14s; --drift-x: -18px; --drift-y: -20px; }
+.page-particles i:nth-child(23) { top: 4%; left: 18%; --particle-duration: 11s; --drift-x: 9px; --drift-y: -16px; }
+.page-particles i:nth-child(24) { top: 10%; left: 36%; --particle-duration: 15s; --particle-size: 1px; --drift-x: -13px; --drift-y: -21px; }
+.page-particles i:nth-child(25) { top: 14%; left: 52%; --particle-duration: 8s; --drift-x: 17px; --drift-y: -11px; }
+.page-particles i:nth-child(26) { top: 9%; left: 93%; --particle-duration: 13s; --particle-size: 3px; --drift-x: -8px; --drift-y: -19px; }
+.page-particles i:nth-child(27) { top: 21%; left: 2%; --particle-duration: 9s; --drift-x: 15px; --drift-y: -14px; }
+.page-particles i:nth-child(28) { top: 27%; left: 20%; --particle-duration: 14s; --particle-size: 1px; --drift-x: -16px; --drift-y: -24px; }
+.page-particles i:nth-child(29) { top: 29%; left: 49%; --particle-duration: 10s; --drift-x: 11px; --drift-y: -17px; }
+.page-particles i:nth-child(30) { top: 25%; left: 68%; --particle-duration: 12s; --drift-x: -12px; --drift-y: -15px; }
+.page-particles i:nth-child(31) { top: 33%; left: 79%; --particle-duration: 8s; --particle-size: 3px; --drift-x: 14px; --drift-y: -22px; }
+.page-particles i:nth-child(32) { top: 37%; left: 35%; --particle-duration: 15s; --particle-size: 1px; --drift-x: -10px; --drift-y: -13px; }
+.page-particles i:nth-child(33) { top: 42%; left: 54%; --particle-duration: 9s; --drift-x: 18px; --drift-y: -20px; }
+.page-particles i:nth-child(34) { top: 47%; left: 72%; --particle-duration: 13s; --drift-x: -15px; --drift-y: -16px; }
+.page-particles i:nth-child(35) { top: 52%; left: 8%; --particle-duration: 10s; --particle-size: 1px; --drift-x: 12px; --drift-y: -23px; }
+.page-particles i:nth-child(36) { top: 56%; left: 34%; --particle-duration: 12s; --drift-x: -9px; --drift-y: -12px; }
+.page-particles i:nth-child(37) { top: 54%; left: 88%; --particle-duration: 8s; --particle-size: 3px; --drift-x: 16px; --drift-y: -18px; }
+.page-particles i:nth-child(38) { top: 63%; left: 17%; --particle-duration: 14s; --drift-x: -14px; --drift-y: -21px; }
+.page-particles i:nth-child(39) { top: 66%; left: 41%; --particle-duration: 9s; --particle-size: 1px; --drift-x: 10px; --drift-y: -15px; }
+.page-particles i:nth-child(40) { top: 61%; left: 70%; --particle-duration: 11s; --drift-x: -17px; --drift-y: -24px; }
+.page-particles i:nth-child(41) { top: 71%; left: 19%; --particle-duration: 13s; --drift-x: 13px; --drift-y: -16px; }
+.page-particles i:nth-child(42) { top: 74%; left: 39%; --particle-duration: 8s; --particle-size: 3px; --drift-x: -11px; --drift-y: -19px; }
+.page-particles i:nth-child(43) { top: 69%; left: 82%; --particle-duration: 15s; --particle-size: 1px; --drift-x: 18px; --drift-y: -13px; }
+.page-particles i:nth-child(44) { top: 77%; left: 96%; --particle-duration: 10s; --drift-x: -8px; --drift-y: -22px; }
+.page-particles i:nth-child(45) { top: 85%; left: 3%; --particle-duration: 12s; --drift-x: 15px; --drift-y: -17px; }
+.page-particles i:nth-child(46) { top: 87%; left: 34%; --particle-duration: 9s; --particle-size: 1px; --drift-x: -13px; --drift-y: -20px; }
+.page-particles i:nth-child(47) { top: 81%; left: 58%; --particle-duration: 14s; --drift-x: 9px; --drift-y: -14px; }
+.page-particles i:nth-child(48) { top: 89%; left: 68%; --particle-duration: 11s; --particle-size: 3px; --drift-x: -16px; --drift-y: -23px; }
+.page-particles i:nth-child(49) { top: 94%; left: 24%; --particle-duration: 8s; --drift-x: 14px; --drift-y: -12px; }
+.page-particles i:nth-child(50) { top: 95%; left: 91%; --particle-duration: 13s; --particle-size: 1px; --drift-x: -12px; --drift-y: -18px; }
 
 .hero-grid {
     position: relative;
@@ -363,7 +399,7 @@ a {
     position: relative;
     overflow: hidden;
     padding: 105px 0;
-    background: #090d16;
+    background: transparent;
     scroll-margin-top: 82px;
 }
 
@@ -551,7 +587,7 @@ a {
     position: relative;
     overflow: hidden;
     padding: 105px 0;
-    background: #080c14;
+    background: transparent;
     scroll-margin-top: 82px;
 }
 
@@ -755,7 +791,7 @@ a {
     position: relative;
     overflow: hidden;
     padding: 105px 0;
-    background: #090d16;
+    background: transparent;
     scroll-margin-top: 82px;
 }
 
@@ -1241,8 +1277,7 @@ a {
 .certificates-section {
     position: relative;
     padding: 108px 0;
-    border-top: 1px solid rgba(255, 255, 255, .06);
-    background: linear-gradient(180deg, #090d16, #080b12);
+    background: transparent;
 }
 
 .certificates-inner {

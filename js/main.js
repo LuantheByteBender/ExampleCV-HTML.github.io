@@ -1,5 +1,6 @@
-/** Loads project content from data/projects.json and renders all projects directly. */
+/** Loads portfolio content from JSON and renders it directly. */
 const projectsGrid = document.querySelector('#projects-grid');
+const certificatesGrid = document.querySelector('#certificates-grid');
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
@@ -69,4 +70,62 @@ if (projectsGrid) {
       projectsGrid.replaceChildren(...projects.map(createProjectCard));
     })
     .catch((error) => console.warn('Using the project markup fallback:', error));
+}
+
+
+
+
+const certificateIcon = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h9l3 3v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"/><path d="M14 3v4h4M8 11h5M8 14h4M15 18l1 4 2-1 2 1-1-4"/></svg>`;
+
+const createCertificateCard = (certificate) => {
+  const card = createElement('article', 'certificate-card is-visible');
+  const media = createElement('div', 'certificate-card-media');
+
+  if (certificate.image) {
+    const image = document.createElement('img');
+    image.src = certificate.image;
+    image.alt = certificate.imageAlt || `${certificate.course} certificate`;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    media.append(image);
+  } else {
+    media.classList.add('certificate-card-media-placeholder');
+    media.innerHTML = certificateIcon;
+    media.append(createElement('span', '', 'Certificate image'));
+  }
+
+  const content = createElement('div', 'certificate-card-content');
+  const meta = [certificate.issuer, certificate.date].filter(Boolean).join(' · ');
+  if (meta) content.append(createElement('p', 'certificate-meta', meta));
+  content.append(createElement('h3', '', certificate.course || 'Untitled course'));
+  if (certificate.description) content.append(createElement('p', 'certificate-description', certificate.description));
+  if (certificate.skills?.length) content.append(createTagList(certificate.skills, 'project-tags'));
+
+  const certificateLink = createLink(
+    'View certificate',
+    certificate.credentialUrl || certificate.image,
+    'project-link certificate-link',
+    certificateIcon
+  );
+  if (certificateLink) content.append(certificateLink);
+
+  card.append(media, content);
+  return card;
+};
+
+if (certificatesGrid) {
+  fetch('data/certificates.json')
+    .then((response) => {
+      if (!response.ok) throw new Error(`Unable to load certificates (${response.status})`);
+      return response.json();
+    })
+    .then((certificates) => {
+      if (!Array.isArray(certificates)) throw new Error('Certificate data must be an array');
+      if (!certificates.length) {
+        certificatesGrid.append(createElement('p', 'certificates-empty', 'Certificates will be added here soon.'));
+        return;
+      }
+      certificatesGrid.replaceChildren(...certificates.map(createCertificateCard));
+    })
+    .catch((error) => console.warn('Unable to render certificates:', error));
 }

@@ -10,6 +10,7 @@ VirtualCV is a professional developer portfolio website built with standards-bas
 - Accessible semantic navigation
 - Professional experience, education, skills, and certificate sections
 - Data-driven project showcase using `data/projects.json`
+- Data-driven course and certificate gallery using `data/certificates.json`
 - GitHub profile or repository integration
 - Contact section and downloadable CV
 - Respectful, reduced-motion-aware interface animations
@@ -48,6 +49,29 @@ VirtualCV/
 - CSS3
 - Modern JavaScript (ES6)
 - GitHub Pages
+
+## Adding a Certificate
+
+Place the certificate image in `assets/certificates/`, then add an item to
+`data/certificates.json`:
+
+```json
+[
+  {
+    "course": "Course name",
+    "issuer": "Course provider",
+    "date": "July 2026",
+    "description": "A short summary of what the course covered.",
+    "skills": ["Skill one", "Skill two"],
+    "image": "assets/certificates/certificate-file.jpg",
+    "imageAlt": "Course name certificate issued by Course provider",
+    "credentialUrl": "https://example.com/credential"
+  }
+]
+```
+
+`description`, `skills`, `imageAlt`, and `credentialUrl` are optional. When
+`credentialUrl` is omitted, the button opens the certificate image.
 
 ## How to Run
 

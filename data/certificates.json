@@ -1,0 +1,13 @@
+[
+  {
+    "course": "Learn Web Development in PHP & MySQL with a Project",
+    "issuer": "Udemy",
+    "description": "A project-based course covering web development with PHP and MySQL.",
+    "skills": [
+      "PHP",
+      "MySQL",
+      "Web Development"
+    ],
+    "image": "assets/certificates/Udemy web image.jpg"
+  }
+]

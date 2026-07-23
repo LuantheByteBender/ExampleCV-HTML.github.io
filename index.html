@@ -279,8 +279,20 @@
       </div>
     </section>
     <section id="skills"></section>
-    <section id="education"></section>
-    <section id="certificates"></section>
+
+    <section id="certificates" class="certificates-section" aria-labelledby="certificates-title">
+      <div class="certificates-inner">
+        <header class="certificates-intro reveal-on-scroll">
+          <p class="section-label">Featured courses</p>
+          <h2 id="certificates-title">Courses That Strengthen My Skills</h2>
+          <p>These courses represent my commitment to continuous learning across software development, quality
+            assurance, artificial intelligence and other emerging technologies. Each completed course includes its
+            certificate of achievement.</p>
+        </header>
+        <!-- Certificate cards are populated from data/certificates.json. -->
+        <div class="certificates-grid" id="certificates-grid" aria-label="Courses and certificates"></div>
+      </div>
+    </section>
     <section id="contact"></section>
   </main>
 

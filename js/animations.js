@@ -78,7 +78,7 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
       entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
-  }, { threshold:0.14 });
+  }, { threshold: 0.14 });
 
   revealElements.forEach((element) => revealObserver.observe(element));
 }

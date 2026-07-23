@@ -40,3 +40,6 @@
 
 @media (min-width: 680px) { .certificates-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (min-width: 1000px) { .certificates-section { padding:142px 0; }.certificates-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+
+@media (min-width: 820px) { .contact-panel { grid-template-columns:minmax(0,1.1fr) minmax(330px,.9fr); align-items:center; gap:58px; padding:48px; } }
+@media (min-width: 1000px) { .contact-section { padding:100px 0 135px; }.contact-panel { padding:58px; } }

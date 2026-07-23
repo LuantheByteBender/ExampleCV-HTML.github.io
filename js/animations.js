@@ -2,6 +2,27 @@
 const revealElements = document.querySelectorAll('.reveal-on-scroll, .journey-timeline');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// Enrich the fixed background without maintaining dozens of repetitive markup entries.
+const particleField = document.querySelector('.page-particles');
+if (particleField) {
+  const extraParticles = document.createDocumentFragment();
+
+  for (let index = 0; index < 40; index += 1) {
+    const particle = document.createElement('i');
+    const direction = index % 2 === 0 ? 1 : -1;
+    particle.style.top = `${2 + ((index * 37 + 11) % 95)}%`;
+    particle.style.left = `${2 + ((index * 53 + 17) % 95)}%`;
+    particle.style.setProperty('--particle-size', `${1 + ((index * 5) % 3)}px`);
+    particle.style.setProperty('--particle-duration', `${7 + ((index * 7) % 9)}s`);
+    particle.style.setProperty('--drift-x', `${direction * (8 + ((index * 3) % 12))}px`);
+    particle.style.setProperty('--drift-y', `${-(12 + ((index * 5) % 14))}px`);
+    particle.style.animationDelay = `${-(index % 11)}s`;
+    extraParticles.append(particle);
+  }
+
+  particleField.append(extraParticles);
+}
+
 // Make nearby badges gravitate towards the cursor anywhere in the profile area.
 if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
   document.querySelectorAll('.hero-visual').forEach((visual) => {

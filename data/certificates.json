@@ -9,5 +9,15 @@
       "Web Development"
     ],
     "image": "assets/certificates/Udemy web image.jpg"
+  },
+  {
+    "course": "Ethical Hacking and Cybersecurity Course for Beginners",
+    "issuer": "Udemy",
+    "description": "A beginner-friendly course introducing ethical hacking and core cybersecurity concepts.",
+    "skills": [
+      "Ethical Hacking",
+      "Cybersecurity"
+    ],
+    "image": "assets/certificates/CyberSecpng.png"
   }
 ]

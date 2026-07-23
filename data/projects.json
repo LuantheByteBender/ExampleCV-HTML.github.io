@@ -1,1 +1,31 @@
-[]
+[
+
+  {
+    "title": "Virtual CV",
+    "category": "Personal",
+    "description": "A premium personal portfolio designed to communicate technical depth and clarity.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "github": "https://github.com/",
+    
+    "visualClass": "visual-cv"
+  },
+  {
+    "title": "Volunteer Charity Management System (Second-Year University Project)",
+    "category": "Web Development",
+    "description": "The Volunteer Charity Management System (VCMS) is a web-based application developed using ASP.NET Web Forms and SQL Server. It is designed to help manage charity events, volunteers, and donations efficiently.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "ASP.NET",
+      "C#",
+      "SQL Server"
+    ],
+    "github": "https://github.com/christophvj/VCMS.git",
+    
+    "visualClass": "visual-university"
+  }
+]

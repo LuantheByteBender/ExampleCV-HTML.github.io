@@ -6,3 +6,6 @@
 
 /* Shared interactive focus treatment for the About technology badges. */
 .technology-list li:focus-visible { outline:2px solid #a8bbff; outline-offset:3px; }
+
+/* Brighter, more prominent social links in the hero. */
+.hero .social-links a { width:42px; height:42px; border-color:rgba(164,190,255,.55); background:rgba(123,158,255,.16); box-shadow:0 7px 18px rgba(76,113,220,.2); color:#dbe7ff; }.hero .social-links a:hover { background:#aac6ff; box-shadow:0 12px 25px rgba(76,113,220,.4); color:#0b1731; transform:translateY(-4px) scale(1.04); }

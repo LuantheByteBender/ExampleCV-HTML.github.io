@@ -122,6 +122,48 @@ a {
     background: linear-gradient(130deg, #080b12 0%, #0b1020 55%, #090d15 100%);
 }
 
+/* Soft, decorative dust flowing behind the hero content. */
+.hero-particles {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hero-particles i {
+    position: absolute;
+    width: var(--particle-size, 2px);
+    height: var(--particle-size, 2px);
+    border-radius: 50%;
+    background: #c7d7ff;
+    box-shadow: 0 0 8px rgba(151, 181, 255, .8);
+    opacity: .32;
+    animation: particle-drift var(--particle-duration, 10s) ease-in-out infinite alternate;
+}
+
+.hero-particles i:nth-child(1) { top: 12%; left: 7%; --particle-duration: 7s; --drift-x: 12px; --drift-y: -18px; }
+.hero-particles i:nth-child(2) { top: 24%; left: 31%; --particle-duration: 10s; --particle-size: 3px; --drift-x: -9px; --drift-y: -13px; }
+.hero-particles i:nth-child(3) { top: 7%; left: 58%; --particle-duration: 9s; --drift-x: 15px; --drift-y: -20px; }
+.hero-particles i:nth-child(4) { top: 18%; left: 84%; --particle-duration: 11s; --drift-x: -13px; --drift-y: -16px; }
+.hero-particles i:nth-child(5) { top: 39%; left: 13%; --particle-duration: 8s; --particle-size: 3px; --drift-x: 10px; --drift-y: -24px; }
+.hero-particles i:nth-child(6) { top: 49%; left: 44%; --particle-duration: 12s; --drift-x: -14px; --drift-y: -18px; }
+.hero-particles i:nth-child(7) { top: 43%; left: 93%; --particle-duration: 7s; --drift-x: 16px; --drift-y: -12px; }
+.hero-particles i:nth-child(8) { top: 68%; left: 5%; --particle-duration: 10s; --drift-x: -11px; --drift-y: -21px; }
+.hero-particles i:nth-child(9) { top: 78%; left: 27%; --particle-duration: 9s; --particle-size: 3px; --drift-x: 14px; --drift-y: -15px; }
+.hero-particles i:nth-child(10) { top: 72%; left: 67%; --particle-duration: 11s; --drift-x: -16px; --drift-y: -19px; }
+.hero-particles i:nth-child(11) { top: 88%; left: 87%; --particle-duration: 8s; --drift-x: 12px; --drift-y: -17px; }
+.hero-particles i:nth-child(12) { top: 58%; left: 79%; --particle-duration: 12s; --particle-size: 3px; --drift-x: -10px; --drift-y: -23px; }
+.hero-particles i:nth-child(13) { top: 6%; left: 43%; --particle-duration: 13s; --drift-x: -12px; --drift-y: -16px; }
+.hero-particles i:nth-child(14) { top: 16%; left: 72%; --particle-duration: 9s; --drift-x: 18px; --drift-y: -12px; }
+.hero-particles i:nth-child(15) { top: 31%; left: 4%; --particle-duration: 12s; --drift-x: 10px; --drift-y: -24px; }
+.hero-particles i:nth-child(16) { top: 34%; left: 62%; --particle-duration: 8s; --particle-size: 3px; --drift-x: -16px; --drift-y: -18px; }
+.hero-particles i:nth-child(17) { top: 52%; left: 24%; --particle-duration: 11s; --drift-x: 14px; --drift-y: -14px; }
+.hero-particles i:nth-child(18) { top: 61%; left: 54%; --particle-duration: 13s; --drift-x: -10px; --drift-y: -22px; }
+.hero-particles i:nth-child(19) { top: 66%; left: 96%; --particle-duration: 9s; --drift-x: 16px; --drift-y: -15px; }
+.hero-particles i:nth-child(20) { top: 83%; left: 12%; --particle-duration: 12s; --particle-size: 3px; --drift-x: -14px; --drift-y: -19px; }
+.hero-particles i:nth-child(21) { top: 91%; left: 48%; --particle-duration: 10s; --drift-x: 12px; --drift-y: -13px; }
+.hero-particles i:nth-child(22) { top: 82%; left: 74%; --particle-duration: 14s; --drift-x: -18px; --drift-y: -20px; }
+
 .hero-grid {
     position: relative;
     z-index: 1;

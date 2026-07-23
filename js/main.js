@@ -114,7 +114,7 @@ const createCertificateCard = (certificate) => {
 };
 
 if (certificatesGrid) {
-  fetch('data/certificates.json')
+  fetch('data/certificates.json', { cache: 'no-store' })
     .then((response) => {
       if (!response.ok) throw new Error(`Unable to load certificates (${response.status})`);
       return response.json();
